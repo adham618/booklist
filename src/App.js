@@ -1,10 +1,15 @@
-import './App.css';
+import React from 'react';
+import BookList from './components/BookList';
+import Navbar from './components/Navbar';
 import BookContextProvider from './Contexts/BookContext';
 
 function App() {
   return (
     <div className="App">
-      <BookContextProvider></BookContextProvider>
+      <BookContextProvider>
+        <Navbar />
+        <BookList />
+      </BookContextProvider>
     </div>
   );
 }
